@@ -17,8 +17,5 @@ namespace MarvelAPI.Models
         public int IdComics { get; set; }
 
         public int IdSeries { get; set; }
-
-
-
     }
 }

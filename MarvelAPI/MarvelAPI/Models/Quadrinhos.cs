@@ -17,7 +17,5 @@ namespace MarvelAPI.Models
 
         public string Thumbnail { get; set; }
 
-
-
     }
 }

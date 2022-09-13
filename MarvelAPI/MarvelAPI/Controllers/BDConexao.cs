@@ -32,7 +32,23 @@ namespace MarvelAPI.Controllers
         public static Boolean novo = false;
         public String sql;
 
+        public BDConexao()
+        {
+            //criando a conexão
+            conexao = new MySqlConnection(strProvider);
+            //abre uma conexão no banco
+            conexao.Open();
+        }
 
+        //Para toda ação, necessito criar um metódo no banco.
+
+
+
+        public void Fechar()
+        {
+            //fechando a conexão no banco
+            conexao.Close();
+        }
 
 
     }

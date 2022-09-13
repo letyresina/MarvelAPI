@@ -1,2 +1,7 @@
-# MarvelAPI
-API feita por Leticia Resina e Larissa Sonoda para as aulas de Programação Android Mobila que irá receber informações da API da Marvel
+# MarvelAPI 
+<br>
+## API feita por Leticia Resina e Larissa Sonoda sobre a Marvel
+
+API feita para as aulas de Programação Android Mobile. 
+Essa API tem como objetivo receber informações da API já pré pronta da Marvel.
+Essa API também servirá para a aplicação Mobile reproduzida e subida no GitHub da aluna Larissa Sonoda. 

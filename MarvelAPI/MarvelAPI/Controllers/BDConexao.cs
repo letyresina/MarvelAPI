@@ -42,6 +42,25 @@ namespace MarvelAPI.Controllers
 
         //Para toda ação, necessito criar um metódo no banco.
 
+        //Select de personagem
+        public List<Personagem> BuscaTodos()
+        {     
+            MySqlDataReader reader;
+
+            sql = "SELECT * FROM Personagem;";
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
+            reader = cmd.ExecuteReader();
+            List<Personagem> perso = new List<Personagem>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    perso.Add(new Personagem(int.Parse(reader["IdCaracter"].ToString()), reader["Nome"].ToString(), reader["Thumbnail"].ToString()));
+
+                }
+            }
+            return perso;
+        }
 
 
         public void Fechar()

@@ -9,9 +9,7 @@ namespace MarvelAPI.Models
     {
         public int IdCharacter { get; set; }
 
-        public string Name { get; set; }
-
-        public string NameStartsWith { get; set; }
+        public string Nome { get; set; }
 
         public string Thumbnail { get; set; }
     }

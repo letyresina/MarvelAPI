@@ -37,3 +37,5 @@ insert into Personagem (Nome, thumbnail) values ('Wanda Maximoff', 'wanda.png');
 insert into Personagem (Nome, thumbnail) values ('Loki', 'loki.png');
 insert into Personagem (Nome, thumbnail) values ('Spider-Man', 'spdm.png');
 insert into Personagem (Nome, thumbnail) values ('Iron Man', 'ironman.png');
+
+select * from Personagem;

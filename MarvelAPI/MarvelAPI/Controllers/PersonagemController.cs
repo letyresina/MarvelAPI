@@ -25,8 +25,8 @@ namespace MarvelAPI.Controllers
         }
 
         // GET: api/Marvel/getPersonagem/5
-        [HttpGet]
-        [ActionName("getPersonagem")]
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.ActionName("getPersonagem")]
         public Personagem Get(int id)
         {
             var personagem = personagens.FirstOrDefault((p) => p.IdCharacter == id);
@@ -34,8 +34,8 @@ namespace MarvelAPI.Controllers
         }
 
         //exemplo de método com busca em Banco de dados
-        [HttpGet]
-        [ActionName("getAll")]
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.ActionName("getAll")]
         public IEnumerable GetAllPersonagem()
         {
             try
@@ -52,8 +52,8 @@ namespace MarvelAPI.Controllers
             }
         }
 
-        [HttpGet]
-        [ActionName("getByNome")]
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.ActionName("getByNome")]
         public IEnumerable GetPersonagensByNome(string nome)
         {
             return personagens.Where(

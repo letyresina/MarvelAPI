@@ -8,10 +8,12 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using MarvelAPI.Models;
+using ActionNameAttribute = System.Web.Http.ActionNameAttribute;
+using HttpGetAttribute = System.Web.Http.HttpGetAttribute;
 
 namespace MarvelAPI.Controllers
 {
-    public class PersonagemController : Controller
+    public class PersonagemController : ApiController
     {
 
         List<Personagem> personagens = new List<Personagem>(new Personagem[] { new Personagem(1, "Wanda Maximoff", "wanda.png"),
@@ -34,8 +36,8 @@ namespace MarvelAPI.Controllers
         }
 
         //exemplo de método com busca em Banco de dados
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.ActionName("getAll")]
+        [HttpGet]
+        [ActionName("getAll")]
         public IEnumerable GetAllPersonagem()
         {
             try
@@ -52,8 +54,8 @@ namespace MarvelAPI.Controllers
             }
         }
 
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.ActionName("getByNome")]
+        [HttpGet]
+        [ActionName("getByNome")]
         public IEnumerable GetPersonagensByNome(string nome)
         {
             return personagens.Where(

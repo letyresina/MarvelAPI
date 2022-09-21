@@ -39,3 +39,10 @@ insert into Personagem (Nome, thumbnail) values ('Spider-Man', 'spdm.png');
 insert into Personagem (Nome, thumbnail) values ('Iron Man', 'ironman.png');
 
 select * from Personagem;
+
+-- Para series (link de imagem da própria api da marvel para deixar mais certo) 
+
+insert into Series (title, startYear, thumbnail) values ('Black Widow', 2004, 'http://i.annihil.us/u/prod/marvel/i/mg/c/70/4bc37e337b8af,jpg');
+insert into Series (title, startYear, thumbnail) values ('Alpha Flight', 2004, 'http://i.annihil.us/u/prod/marvel/i/mg/2/60/4bc69af2a8afd.jpg');
+
+select * from Series;

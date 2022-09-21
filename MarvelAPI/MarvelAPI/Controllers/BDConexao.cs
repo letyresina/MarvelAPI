@@ -62,6 +62,25 @@ namespace MarvelAPI.Controllers
             return perso;
         }
 
+        //Select de series
+        public List<Series> BuscaTodosSeries()
+        {
+            MySqlDataReader reader;
+
+            sql = "SELECT * FROM Series;";
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
+            reader = cmd.ExecuteReader();
+            List<Series> serie = new List<Series>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    serie.Add(new Series(int.Parse(reader["IdSeries"].ToString()), reader["Title"].ToString(), reader["Thumbnail"].ToString()));
+
+                }
+            }
+            return serie;
+        }
 
         public void Fechar()
         {

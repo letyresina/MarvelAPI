@@ -51,7 +51,7 @@ namespace MarvelAPI.Controllers
                 throw new HttpResponseException(resp);
             }
         }
-        // POST: api/Livro
+        // POST: api/
         [System.Web.Http.HttpPost]
         [System.Web.Http.ActionName("addItens")]
         public HttpResponseMessage Post([FromBody] List<Personagem> itens)

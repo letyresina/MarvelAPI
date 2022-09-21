@@ -24,9 +24,9 @@ namespace MarvelAPI.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/Marvel/5
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.ActionName("getPersonagem")]
+        // GET: api/Marvel/getPersonagem/5
+        [HttpGet]
+        [ActionName("getPersonagem")]
         public Personagem Get(int id)
         {
             var personagem = personagens.FirstOrDefault((p) => p.IdCharacter == id);
@@ -34,16 +34,16 @@ namespace MarvelAPI.Controllers
         }
 
         //exemplo de método com busca em Banco de dados
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.ActionName("getAll")]
-        public IEnumerable GetAllLivros()
+        [HttpGet]
+        [ActionName("getAll")]
+        public IEnumerable GetAllPersonagem()
         {
             try
             {
                 BDConexao db = new BDConexao();
-                var l = db.BuscaTodos();
+                var perso = db.BuscaTodos();
                 db.Fechar();
-                return l;
+                return perso;
             }
             catch (Exception e)
             {
@@ -51,18 +51,14 @@ namespace MarvelAPI.Controllers
                 throw new HttpResponseException(resp);
             }
         }
-        // POST: api/
-        [System.Web.Http.HttpPost]
-        [System.Web.Http.ActionName("addItens")]
-        public HttpResponseMessage Post([FromBody] List<Personagem> itens)
+
+        [HttpGet]
+        [ActionName("getByNome")]
+        public IEnumerable GetPersonagensByNome(string nome)
         {
-            if (itens == null)
-            {
-                return new HttpResponseMessage(HttpStatusCode.NotModified);
-            }
-            personagens.AddRange(itens);
-            var response = new HttpResponseMessage(HttpStatusCode.Created);
-            return response;
+            return personagens.Where(
+                (p) => string.Equals(p.Nome, nome,
+                    StringComparison.OrdinalIgnoreCase));
         }
 
     }

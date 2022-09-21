@@ -24,7 +24,7 @@ namespace MarvelAPI.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/Livro/getLivro/5
+        // GET: api/Marvel/5
         [System.Web.Http.HttpGet]
         [System.Web.Http.ActionName("getPersonagem")]
         public Personagem Get(int id)

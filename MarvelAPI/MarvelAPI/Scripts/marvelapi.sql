@@ -33,6 +33,8 @@ create table PersonagemQuadrinho(
     foreign key (IdComics) references Quadrinhos(IdComics)
 );
 
+-- Ajustar nomes dos personagens depois e link da imagem (ajustar na API também)
+
 insert into Personagem (Nome, thumbnail) values ('Wanda Maximoff', 'wanda.png');
 insert into Personagem (Nome, thumbnail) values ('Loki', 'loki.png');
 insert into Personagem (Nome, thumbnail) values ('Spider-Man', 'spdm.png');

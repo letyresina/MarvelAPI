@@ -27,8 +27,8 @@ namespace MarvelAPI.Controllers
         }
 
         // GET: api/Marvel/getPersonagem/5
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.ActionName("getPersonagem")]
+        [HttpGet]
+        [ActionName("getPersonagem")]
         public Personagem Get(int id)
         {
             var personagem = personagens.FirstOrDefault((p) => p.IdCharacter == id);

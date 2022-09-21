@@ -199,7 +199,7 @@
     <Compile Include="Controllers\BDConexao.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonagemController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\SeriesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -265,6 +265,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\BDConexao\" />
     <Folder Include="Views\Personagem\" />
+    <Folder Include="Views\Series\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

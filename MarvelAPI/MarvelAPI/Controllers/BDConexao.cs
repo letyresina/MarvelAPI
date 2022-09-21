@@ -15,7 +15,7 @@ namespace MarvelAPI.Controllers
         static string host = "localhost";
 
         //nome do arquivo de banco de dados
-        static string database = "marvelapi.sql";
+        static string database = "dbMarvelAPI";
 
         //usuário de conexão do banco
         static string userDB = "root";
@@ -55,7 +55,7 @@ namespace MarvelAPI.Controllers
             {
                 while (reader.Read())
                 {
-                    perso.Add(new Personagem(int.Parse(reader["IdCaracter"].ToString()), reader["Nome"].ToString(), reader["Thumbnail"].ToString()));
+                    perso.Add(new Personagem(int.Parse(reader["IdCharacter"].ToString()), reader["Nome"].ToString(), reader["Thumbnail"].ToString()));
 
                 }
             }

@@ -10,12 +10,12 @@ namespace MarvelAPI.Models
 
         public Series(int id, string title, string thumbnail)
         {
-            IdSeries = id;
+            IdSerie = id;
             Title = title;
             Thumbnail = thumbnail;
         }
 
-        public int IdSeries { get; set; }
+        public int IdSerie { get; set; }
 
         public string Title { get; set; }
 

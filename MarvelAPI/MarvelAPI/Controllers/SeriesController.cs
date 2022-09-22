@@ -28,27 +28,27 @@ namespace MarvelAPI.Controllers
         [ActionName("getSerie")]
         public Series Get(int id)
         {
-            var serie = series.FirstOrDefault((p) => p.IdSeries == id);
+            var serie = series.FirstOrDefault((p) => p.IdSerie == id);
             return serie;
         }
 
-        [HttpGet]
+      [HttpGet]
         [ActionName("getAll")]
         public IEnumerable GetAllSeries()
         {
             try
             {
                 BDConexao db = new BDConexao();
-                var opa = db.BuscaTodosSeries();
+                var serie = db.BuscaTodosSeries();
                 db.Fechar();
-                return opa;
+                return serie;
             }
             catch (Exception e)
             {
                 var resp = new HttpResponseMessage(HttpStatusCode.Unauthorized);
                 throw new HttpResponseException(resp);
             }
-        }
+        } 
 
         [HttpGet]
         [ActionName("getByTitle")]

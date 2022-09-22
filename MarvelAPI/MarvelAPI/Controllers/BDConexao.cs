@@ -75,7 +75,7 @@ namespace MarvelAPI.Controllers
             {
                 while (reader.Read())
                 {
-                    serie.Add(new Series(int.Parse(reader["IdSeries"].ToString()), reader["Title"].ToString(), reader["Thumbnail"].ToString()));
+                    serie.Add(new Series(int.Parse(reader["IdSerie"].ToString()), reader["Title"].ToString(), reader["Thumbnail"].ToString()));
 
                 }
             }

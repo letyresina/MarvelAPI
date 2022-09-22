@@ -65,6 +65,4 @@ select * from PersonagemSerie;
 
 select * from PersonagemQuadrinho;
 
--- Criando procedures para ver elas unidas 
-
 

@@ -55,5 +55,16 @@ insert into Quadrinhos (title, issueNumber, thumbnail) values ('Alpha Flight (20
 
 select * from Quadrinhos;
 
+-- Mapeando as tabelas intermediárias (a nível de teste) 
+
+insert into PersonagemSerie values (1, 2);
+
+insert into PersonagemQuadrinho values (1, 1);
+
+select * from PersonagemSerie;
+
+select * from PersonagemQuadrinho;
+
 -- Criando procedures para ver elas unidas 
+
 

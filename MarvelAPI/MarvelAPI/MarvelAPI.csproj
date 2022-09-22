@@ -199,6 +199,8 @@
     <Compile Include="Controllers\BDConexao.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonagemController.cs" />
+    <Compile Include="Controllers\Personagem_QuadrinhoController.cs" />
+    <Compile Include="Controllers\Personagem_SeriesController.cs" />
     <Compile Include="Controllers\QuadrinhosController.cs" />
     <Compile Include="Controllers\SeriesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -266,6 +268,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\BDConexao\" />
     <Folder Include="Views\Personagem\" />
+    <Folder Include="Views\Personagem_Quadrinho\" />
+    <Folder Include="Views\Personagem_Series\" />
     <Folder Include="Views\Quadrinhos\" />
     <Folder Include="Views\Series\" />
   </ItemGroup>

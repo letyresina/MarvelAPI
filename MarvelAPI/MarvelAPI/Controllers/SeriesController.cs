@@ -10,6 +10,8 @@ using System.Web.Mvc;
 using MarvelAPI.Models;
 using ActionNameAttribute = System.Web.Http.ActionNameAttribute;
 using HttpGetAttribute = System.Web.Http.HttpGetAttribute;
+using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
+
 
 namespace MarvelAPI.Controllers
 {
@@ -52,6 +54,21 @@ namespace MarvelAPI.Controllers
             return series.Where(
                 (p) => string.Equals(p.Title, title,
                     StringComparison.OrdinalIgnoreCase));
+        }
+
+        // POST: api/Quadrinhos
+        // Inserção quando a API estiver no Docker
+        [HttpPost]
+        [ActionName("addItens")]
+        public HttpResponseMessage Post([FromBody] List<Series> itens)
+        {
+            if (itens == null)
+            {
+                return new HttpResponseMessage(HttpStatusCode.NotModified);
+            }
+            series.AddRange(itens);
+            var response = new HttpResponseMessage(HttpStatusCode.Created);
+            return response;
         }
     }
 }

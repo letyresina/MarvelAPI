@@ -82,6 +82,26 @@ namespace MarvelAPI.Controllers
             return serie;
         }
 
+        //Select de Comics 
+        public List<Quadrinhos> BuscaTodosComics()
+        {
+            MySqlDataReader reader;
+
+            sql = "SELECT * FROM Quadrinhos;";
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
+            reader = cmd.ExecuteReader();
+            List<Quadrinhos> quadrinho = new List<Quadrinhos>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    quadrinho.Add(new Quadrinhos(int.Parse(reader["IdComics"].ToString()), reader["Title"].ToString(), int.Parse(reader["IssueNumber"].ToString()), reader["Thumbnail"].ToString()));
+
+                }
+            }
+            return quadrinho;
+        }
+
         public void Fechar()
         {
             //fechando a conexão no banco

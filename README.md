@@ -1,5 +1,9 @@
 ## MarvelAPI 
 
+![Marvel_Logo svg](https://user-images.githubusercontent.com/80417466/191762154-ec117c80-5259-442e-88d4-a45fd745c9c4.png)
+
+##
+
 API feita por Leticia Resina e Larissa Sonoda sobre a Marvel.
 
 API feita para as aulas de Programação Android Mobile. 

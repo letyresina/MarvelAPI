@@ -104,25 +104,6 @@ namespace MarvelAPI.Controllers
 
         //Selects para tabelas intermediárias (sujeito a mudanças futuras)
 
-        public List<Personagem_Quadrinho> BuscaTodosPQ()
-        {
-            MySqlDataReader reader;
-
-            sql = "SELECT * FROM PersonagemQuadrinho;";
-            MySqlCommand cmd = new MySqlCommand(sql, conexao);
-            reader = cmd.ExecuteReader();
-            List<Personagem_Quadrinho> PQ = new List<Personagem_Quadrinho>();
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    PQ.Add(new Personagem_Quadrinho(int.Parse(reader["IdSerie"].ToString()), int.Parse(reader["IdCharacter"].ToString())));
-
-                }
-            }
-            return PQ;
-        }
-
         public List<Personagem_Series> BuscaTodosPS()
         {
             MySqlDataReader reader;
@@ -135,11 +116,30 @@ namespace MarvelAPI.Controllers
             {
                 while (reader.Read())
                 {
-                    PS.Add(new Personagem_Series(int.Parse(reader["IdComics"].ToString()), int.Parse(reader["IdCharacter"].ToString())));
+                    PS.Add(new Personagem_Series(int.Parse(reader["IdSerie"].ToString()), int.Parse(reader["IdCharacter"].ToString())));
 
                 }
             }
             return PS;
+        }
+
+        public List<Personagem_Quadrinho> BuscaTodosPQ()
+        {
+            MySqlDataReader reader;
+
+            sql = "SELECT * FROM PersonagemQuadrinho;";
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
+            reader = cmd.ExecuteReader();
+            List<Personagem_Quadrinho> PQ = new List<Personagem_Quadrinho>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    PQ.Add(new Personagem_Quadrinho(int.Parse(reader["IdComics"].ToString()), int.Parse(reader["IdCharacter"].ToString())));
+
+                }
+            }
+            return PQ;
         }
 
         public void Fechar()

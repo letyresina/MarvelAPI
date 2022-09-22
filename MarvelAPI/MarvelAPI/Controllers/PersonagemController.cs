@@ -16,10 +16,10 @@ namespace MarvelAPI.Controllers
     public class PersonagemController : ApiController
     {
 
-        List<Personagem> personagens = new List<Personagem>(new Personagem[] { new Personagem(1, "Wanda Maximoff", "wanda.png"),
-                                                            new Personagem(2, "Loki", "loki.png"),
-                                                            new Personagem(3, "Spider-Man", "spiderman.png"),
-                                                            new Personagem(4, "Iron Man", "ironman.png")});
+        List<Personagem> personagens = new List<Personagem>(new Personagem[] { new Personagem(1, "Scarlet Witch", "http://i.annihil.us/u/prod/marvel/i/mg/6/70/5261a7d7c394b.jpg"),
+                                                            new Personagem(2, "Loki", "http://i.annihil.us/u/prod/marvel/i/mg/d/90/526547f509313.jpg"),
+                                                            new Personagem(3, "Spider-Man", "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg"),
+                                                            new Personagem(4, "Iron Man", "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55.jpg")});
 
         public IEnumerable<string> Get()
         {

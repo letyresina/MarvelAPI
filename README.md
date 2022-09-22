@@ -20,6 +20,6 @@ Há a intenção de futuramente, utilizarmos o Docker para conseguirmos unir jun
 
 ##
 
-<<p align="center">
+<p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>

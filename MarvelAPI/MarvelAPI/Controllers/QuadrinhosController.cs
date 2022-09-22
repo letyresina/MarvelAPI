@@ -17,11 +17,6 @@ namespace MarvelAPI.Controllers
     {
         List<Quadrinhos> quadrinhos = new List<Quadrinhos>(new Quadrinhos[] { new Quadrinhos(1, "Alpha Flight (2011) #8 (Yu Variant)", 8, "http://i.annihil.us/u/prod/marvel/i/mg/c/70/4bc37e337b8af,jpg"),});
 
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
         [HttpGet]
         [ActionName("getQuadrinhos")]
         public Quadrinhos Get(int id)

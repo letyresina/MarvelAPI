@@ -21,11 +21,6 @@ namespace MarvelAPI.Controllers
                                                             new Personagem(3, "Spider-Man", "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg"),
                                                             new Personagem(4, "Iron Man", "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55.jpg")});
 
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
         // GET: api/Marvel/getPersonagem/5
         [HttpGet]
         [ActionName("getPersonagem")]

@@ -19,11 +19,6 @@ namespace MarvelAPI.Controllers
         List<Series> series = new List<Series>(new Series[] { new Series(1, "Black Widow", "http://i.annihil.us/u/prod/marvel/i/mg/c/70/4bc37e337b8af,jpg"),
                                                             new Series(2, "Alpha Flight", "http://i.annihil.us/u/prod/marvel/i/mg/2/60/4bc69af2a8afd.jpg")});
 
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
         [HttpGet]
         [ActionName("getSerie")]
         public Series Get(int id)

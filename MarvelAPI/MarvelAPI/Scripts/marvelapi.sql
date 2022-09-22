@@ -48,3 +48,5 @@ insert into Series (title, startYear, thumbnail) values ('Black Widow', 2004, 'h
 insert into Series (title, startYear, thumbnail) values ('Alpha Flight', 2004, 'http://i.annihil.us/u/prod/marvel/i/mg/2/60/4bc69af2a8afd.jpg');
 
 select * from Series;
+
+-- Criando procedures para ver elas unidas 

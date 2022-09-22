@@ -104,6 +104,8 @@ namespace MarvelAPI.Controllers
 
         //Selects para tabelas intermediárias (sujeito a mudanças futuras)
 
+
+        //Para séries!
         public List<Personagem_Series> BuscaTodosPS()
         {
             MySqlDataReader reader;
@@ -123,6 +125,7 @@ namespace MarvelAPI.Controllers
             return PS;
         }
 
+        //Para quadrinhos!
         public List<Personagem_Quadrinho> BuscaTodosPQ()
         {
             MySqlDataReader reader;

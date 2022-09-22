@@ -16,7 +16,7 @@ namespace MarvelAPI.Controllers
     public class Personagem_SeriesController : ApiController
     {
         // GET: Personagem_Series
-        List<Personagem_Series]> ps = new List<Personagem_Series>(new Personagem_Series[] { new Personagem_Series(1, 2)});
+        List<Personagem_Series> ps = new List<Personagem_Series>(new Personagem_Series[] { new Personagem_Series(1, 2)});
 
         [HttpGet]
         [ActionName("getPersonagemSerie")]

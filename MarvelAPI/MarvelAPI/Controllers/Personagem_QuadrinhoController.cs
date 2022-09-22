@@ -17,7 +17,7 @@ namespace MarvelAPI.Controllers
     {
         // GET: Personagem_Quadrinho
 
-        List<Personagem_Quadrinho]> pq = new List<Personagem_Quadrinho>(new Personagem_Quadrinho[] { new Personagem_Quadrinho(1, 1)});
+        List<Personagem_Quadrinho> pq = new List<Personagem_Quadrinho>(new Personagem_Quadrinho[] { new Personagem_Quadrinho(1, 1)});
 
         [HttpGet]
         [ActionName("getPersonagemQuadrinho")]

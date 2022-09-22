@@ -1,4 +1,4 @@
-# MarvelAPI 
+## MarvelAPI 
 
 API feita por Leticia Resina e Larissa Sonoda sobre a Marvel.
 
@@ -7,6 +7,8 @@ Essa API tem como objetivo receber informações da API já pré pronta da Marve
 Essa API também servirá para a aplicação Mobile reproduzida e subida no GitHub da aluna Larissa Sonoda. 
 
 API tem como objetivo colocarmos em prática o que aprendemos em sala de aula.
+
+Há a intenção de futuramente, utilizarmos o Docker para conseguirmos unir juntamente a aplicação Mobile. 
 
 <h4 align="center"> 
     :construction:  Projeto em construção  :construction:

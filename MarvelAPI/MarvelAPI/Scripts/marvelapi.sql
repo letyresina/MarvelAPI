@@ -49,4 +49,11 @@ insert into Series (title, startYear, thumbnail) values ('Alpha Flight', 2004, '
 
 select * from Series;
 
+-- Para quadrinhos 
+
+insert into Quadrinhos (title, issueNumber, thumbnail) values ('Alpha Flight (2011) #8 (Yu Variant)', 8, 'http://i.annihil.us/u/prod/marvel/i/mg/c/70/4bc37e337b8af,jpg');
+
+select * from Quadrinhos;
+
 -- Criando procedures para ver elas unidas 
+

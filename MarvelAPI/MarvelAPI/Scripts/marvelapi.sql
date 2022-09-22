@@ -35,10 +35,10 @@ create table PersonagemQuadrinho(
 
 -- Ajustar nomes dos personagens depois e link da imagem (ajustar na API também)
 
-insert into Personagem (Nome, thumbnail) values ('Wanda Maximoff', 'wanda.png');
-insert into Personagem (Nome, thumbnail) values ('Loki', 'loki.png');
-insert into Personagem (Nome, thumbnail) values ('Spider-Man', 'spdm.png');
-insert into Personagem (Nome, thumbnail) values ('Iron Man', 'ironman.png');
+insert into Personagem (Nome, thumbnail) values ('Scarlet Witch', 'http://i.annihil.us/u/prod/marvel/i/mg/6/70/5261a7d7c394b.jpg');
+insert into Personagem (Nome, thumbnail) values ('Loki', 'http://i.annihil.us/u/prod/marvel/i/mg/d/90/526547f509313.jpg');
+insert into Personagem (Nome, thumbnail) values ('Peter Parker', 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg');
+insert into Personagem (Nome, thumbnail) values ('Iron Man', 'http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55.jpg');
 
 select * from Personagem;
 
